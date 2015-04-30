@@ -29,6 +29,29 @@
         a.darken:hover img {
             opacity: 0.7;
         }
+        
+        .typed-cursor{
+    opacity: 1;
+            color:white;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
     </style>
     <!-- Compiled and minified JavaScript -->
 
@@ -68,9 +91,17 @@
         <div class="valign-wrapper parallax-container" style="height:800px">
             <div class="container">
                 <h1 class="valign center white-text">Fog WorkShop</h1>
-                <h5 class="center white-text">Your Ultimate Customizing Software Solution</h5>
+                <div style="font-size:25px" class="center">
+                    
+                    <span class="center white-text">&nbsp;</span>
+                    <span class="typed center white-text"></span>
+                    <span id="typed-cursor"></span>
+                    
+                </div>
+                <br>
+                
                 <div class="center">
-                    <a href="#intro" class="center waves-effect waves-light btn">Learn More</a>
+                    <a href="#intro" class="center waves-effect waves-light btn-large">Learn More</a>
                 </div>
             </div>
             <div class="parallax"><img src="img/backgroud-1.jpg">
@@ -81,7 +112,7 @@
         <div class="container">
             <div class="row">
                 <h3 class="center blue-grey-text">We Focus On Customizing</h3>
-                <div class="col s12 m4 l4">
+                <div class="col s12 m4 l4 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
                     <h2 class="center blue-grey-text">
                 <i class="large blue-text mdi-editor-attach-money"></i>
             </h2>
@@ -116,20 +147,6 @@
                 </div>
             </div>
             <p class="center flow-text">We build Web, Application, Software Design....etc</p>
-             <ul class="collapsible" data-collapsible="accordion">
-    <li>
-      <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>First</div>
-      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="mdi-maps-place"></i>Second</div>
-      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="mdi-social-whatshot"></i>Third</div>
-      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-    </li>
-  </ul>
         </div>
     </section>
     <section class="scrollspy" id="team">
@@ -207,32 +224,32 @@
             </div>
         </div>
     </section>
-    
+
     <section class="scrollspy" id="projects">
         <div class="container" id="projects">
             <div class="row">
                 <div class="col s12">
                     <h2 class="blue-grey-text"><i class="mdi-av-web"></i> Projects</h2>
-                    <ul id="projects_list">
+                    <ul class="collapsible" data-collapsible="accordion">
                         <li>
-                            <h4><a href="#">交通大學EDA實驗室網站</a></h4>
-                            <p>This is a description</p>
+                            <div class="collapsible-header">交通大學EDA實驗室網站</div>
+                            <div class="collapsible-body">
+                                <p>
+                                    <a href="eda.nctu.edu.tw" class="right waves-effect waves-light btn">Take a look</a>
+                                </p>
+                            </div>
                         </li>
                         <li>
-                            <h4><a href="http://biztaiwan.tw">BIZTaiwan官方網站</a></h4>
-                            <p>This is a description</p>
+                            <div class="collapsible-header">BIZTaiwan官方網站</div>
+                            <div class="collapsible-body">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
                         </li>
                         <li>
-                            <h4><a href="http://nctuoj.twbbs.org">交通大學Online Judge</a></h4>
-                            <p>This is a description</p>
-                        </li>
-                        <li>
-                            <h4><a href="#">List Item</a></h4>
-                            <p>This is a description</p>
-                        </li>
-                        <li>
-                            <h4><a href="#">List Item</a></h4>
-                            <p>This is a description</p>
+                            <div class="collapsible-header">交通大學Online Judge</div>
+                            <div class="collapsible-body">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -322,24 +339,39 @@
         </div>
     </div>
     
+
     <!--  Scripts-->
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/jquery.flip.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script>
-        
         $(document).ready(function () {
             //   $('#modal1').openModal();
-            
+            $("#flip").flip();
             $('.modal-trigger').leanModal();
             $('.scrollspy').scrollSpy();
             $(".button-collapse").sideNav();
             $('.parallax').parallax();
-$('.collapsible').collapsible({
-                    accordion : true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-                });
+            $('.collapsible').collapsible({
+                accordion: true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+            });
+            $(function(){
+      $(".typed").typed({
+        strings: ["^500 Your Nice ^1000", "Your Ultimate Customizing Devolopers"],
+        typeSpeed: 100,
+        backSpeed: 50,
+          showCursor: true,
+          cursorChar: "▏",
+      });
+  });
+
+            new WOW().init();
         });
+        
     </script>
-    
+
 </body>
 
 
