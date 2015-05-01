@@ -10,6 +10,7 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href="css/animate.min.css">
     <style type="text/css">
         a.darken {
             display: inline-block;
@@ -30,28 +31,49 @@
             opacity: 0.7;
         }
         
-        .typed-cursor{
-    opacity: 1;
-            color:white;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-}
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
+        .typed-cursor {
+            opacity: 1;
+            color: white;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-webkit-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-moz-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
     </style>
     <!-- Compiled and minified JavaScript -->
 
@@ -92,14 +114,14 @@
             <div class="container">
                 <h1 class="valign center white-text">Fog WorkShop</h1>
                 <div style="font-size:25px" class="center">
-                    
+
                     <span class="center white-text">&nbsp;</span>
                     <span class="typed center white-text"></span>
                     <span id="typed-cursor"></span>
-                    
+
                 </div>
                 <br>
-                
+
                 <div class="center">
                     <a href="#intro" class="center waves-effect waves-light btn-large">Learn More</a>
                 </div>
@@ -112,7 +134,7 @@
         <div class="container">
             <div class="row">
                 <h3 class="center blue-grey-text">We Focus On Customizing</h3>
-                <div class="col s12 m4 l4 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
+                <div class="col s12 m4 l4 wow fadeIn  animated ">
                     <h2 class="center blue-grey-text">
                 <i class="large blue-text mdi-editor-attach-money"></i>
             </h2>
@@ -123,7 +145,7 @@
                         You can get amazing product with great price!
                     </p>
                 </div>
-                <div class="col s12 m4 l4">
+                <div class="col s12 m4 l4 wow fadeIn  animated ">
                     <h2 class="center blue-grey-text">
                 <i class="large red-text mdi-action-favorite-outline"></i>
             </h2>
@@ -134,7 +156,7 @@
 
                     </p>
                 </div>
-                <div class="col s12 m4 l4">
+                <div class="col s12 m4 l4 wow fadeIn  animated " >
                     <h2 class="center blue-grey-text">
                         <i class="large green-text mdi-action-extension"></i>
                     </h2>
@@ -146,7 +168,7 @@
                     </p>
                 </div>
             </div>
-            <p class="center flow-text">We build Web, Application, Software Design....etc</p>
+            <p class="center flow-text wow lightSpeedIn animated " data-wow-duration="1s">We build Web, Application, Software Design....etc</p>
         </div>
     </section>
     <section class="scrollspy" id="team">
@@ -154,7 +176,7 @@
             <div class="row">
                 <div class="col s">
                     <h2 class="blue-grey-text"><i class="mdi-social-people"></i> Our Team</h2>
-                    <div class="col s12 m6 l4">
+                    <div class="col s12 m6 l4 wow fadeInLeft animated" data-wow-delay="0.5s">
                         <div class="card">
                             <a class="darken card-image modal-trigger" href="#kevin1">
                                 <img src="img/kevinchen.jpg">
@@ -165,7 +187,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m6 l4">
+                    <div class="col s12 m6 l4 wow fadeInDown animated" data-wow-delay="0.5s">
                         <div class="card">
                             <a class="darken card-image modal-trigger" href="#micro">
                                 <img src="img/mirco.jpg">
@@ -176,7 +198,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m6 l4">
+                    <div class="col s12 m6 l4 wow fadeInRight animated" data-wow-delay="0.5s">
                         <div class="card">
                             <a class="darken card-image modal-trigger" href="#hank">
                                 <img src="img/hank.jpg">
@@ -187,7 +209,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m6 l4">
+                    <div class="col s12 m6 l4 wow fadeInLeft animated" data-wow-delay="0.5s">
                         <div class="card">
                             <a class="darken card-image modal-trigger" href="#easy">
                                 <img src="img/easy.jpg">
@@ -198,7 +220,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m6 l4">
+                    <div class="col s12 m6 l4 wow fadeInUp  animated" data-wow-delay="0.5s">
+
                         <div class="card">
                             <a class="darken card-image modal-trigger" href="#allen">
                                 <img src="img/allen.jpg">
@@ -209,7 +232,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m6 l4">
+                    <div class="col s12 m6 l4 wow fadeInRight   animated" data-wow-delay="0.5s">
                         <div class="card">
                             <a class="darken card-image modal-trigger" href="#kevin2">
                                 <img src="img/kevinchen2.jpg">
@@ -338,7 +361,7 @@
             <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
     </div>
-    
+
 
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -357,19 +380,29 @@
             $('.collapsible').collapsible({
                 accordion: true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
             });
-            $(function(){
-      $(".typed").typed({
-        strings: ["^500 Your Nice ^1000", "Your Ultimate Customizing Devolopers"],
-        typeSpeed: 100,
-        backSpeed: 50,
-          showCursor: true,
-          cursorChar: "▏",
-      });
-  });
+            $(function () {
+                $(".typed").typed({
+                    strings: ["^500 Your Nice ^1000", "Your Ultimate Customizing Devolopers"],
+                    typeSpeed: 100,
+                    backSpeed: 50,
+                    showCursor: true,
+                    cursorChar: "▏",
+                });
+            });
 
-            new WOW().init();
+            var wow = new WOW({
+                boxClass: 'wow', // animated element css class (default is wow)
+                animateClass: 'animated', // animation css class (default is animated)
+                offset: 1, // distance to the element when triggering the animation (default is 0)
+                mobile: true, // trigger animations on mobile devices (default is true)
+                live: true, // act on asynchronously loaded content (default is true)
+                callback: function (box) {
+                    // the callback is fired every time an animation is started
+                    // the argument that is passed in is the DOM node being animated
+                }
+            });
+            wow.init();
         });
-        
     </script>
 
 </body>
